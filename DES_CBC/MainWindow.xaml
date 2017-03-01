@@ -1,0 +1,30 @@
+﻿<Window x:Class="DES_CBC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DES_CBC"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="10">
+            <TextBlock>Encrypt keys</TextBlock>
+            <StatusBar HorizontalAlignment="Left">
+                <Button Click="MinusBtn_Click" Content="-" Margin="10"/>
+                <TextBlock Name="CountBox">0</TextBlock>
+                <Button Click="PlusBtn_Click" Content="+" Margin="10"/>
+            </StatusBar>
+            <StackPanel Name="EncryptKeys"/>
+            <Button Click="buttonEncrypt_Click" Content="Encrypt" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock>Decrypt keys</TextBlock>
+            <StackPanel Name="DecryptKeys"/>
+                <Button Click="buttonDecipher_Click" Content="Decrypt" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
